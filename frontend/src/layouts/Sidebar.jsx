@@ -14,7 +14,8 @@ import {
   Sparkles,
   AlertOctagon,
   Bell,
-  Trophy
+  Trophy,
+  BookOpen
 } from 'lucide-react';
 import './Layout.css';
 
@@ -30,6 +31,7 @@ const menuItems = [
   { path: '/predictions', name: 'Predictions & Recs', icon: Sparkles },
   { path: '/alerts', name: 'Risk Alerts', icon: Bell },
   { path: '/reports', name: 'Coin Reports', icon: AlertOctagon },
+  { path: '/education', name: 'Learn & FAQ', icon: BookOpen },
   { path: '/admin', name: 'Admin Panel', icon: ShieldAlert },
   { path: '/settings', name: 'Settings', icon: Settings },
 ];

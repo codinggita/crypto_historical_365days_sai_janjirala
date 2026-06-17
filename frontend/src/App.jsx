@@ -25,6 +25,7 @@ import Reports from './pages/Reports';
 import Alerts from './pages/Alerts';
 import Leaderboards from './pages/Leaderboards';
 import Settings from './pages/Settings';
+import Education from './pages/Education';
 
 function PagePlaceholder({ title }) {
   return (
@@ -53,6 +54,7 @@ export default function App() {
             <Route path="predictions" element={<Predictions />} />
             <Route path="alerts" element={<Alerts />} />
             <Route path="reports" element={<Reports />} />
+            <Route path="education" element={<Education />} />
             <Route path="admin" element={
               <ProtectedRoute adminOnly>
                 <Admin />
