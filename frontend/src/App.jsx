@@ -16,6 +16,7 @@ import CoinDetails from './pages/CoinDetails';
 import Compare from './pages/Compare';
 import Heatmap from './pages/Heatmap';
 import Stats from './pages/Stats';
+import Analytics from './pages/Analytics';
 
 function PagePlaceholder({ title }) {
   return (
@@ -38,7 +39,7 @@ export default function App() {
             <Route path="compare" element={<Compare />} />
             <Route path="heatmap" element={<Heatmap />} />
             <Route path="stats" element={<Stats />} />
-            <Route path="analytics" element={<PagePlaceholder title="Analytics Hub" />} />
+            <Route path="analytics" element={<Analytics />} />
             <Route path="portfolio" element={<PagePlaceholder title="Portfolio Simulator" />} />
             <Route path="admin" element={
               <ProtectedRoute adminOnly>
