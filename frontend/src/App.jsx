@@ -24,6 +24,7 @@ import Maintenance from './pages/Maintenance';
 import Reports from './pages/Reports';
 import Alerts from './pages/Alerts';
 import Leaderboards from './pages/Leaderboards';
+import Settings from './pages/Settings';
 
 function PagePlaceholder({ title }) {
   return (
@@ -67,7 +68,7 @@ export default function App() {
                 <Profile />
               </ProtectedRoute>
             } />
-            <Route path="settings" element={<PagePlaceholder title="Settings" />} />
+            <Route path="settings" element={<Settings />} />
             <Route path="*" element={<PagePlaceholder title="404 Not Found" />} />
           </Route>
           
