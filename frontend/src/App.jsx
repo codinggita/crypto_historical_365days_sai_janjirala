@@ -21,6 +21,7 @@ import Portfolio from './pages/Portfolio';
 import Predictions from './pages/Predictions';
 import Admin from './pages/Admin';
 import Maintenance from './pages/Maintenance';
+import Reports from './pages/Reports';
 
 function PagePlaceholder({ title }) {
   return (
@@ -46,6 +47,7 @@ export default function App() {
             <Route path="analytics" element={<Analytics />} />
             <Route path="portfolio" element={<Portfolio />} />
             <Route path="predictions" element={<Predictions />} />
+            <Route path="reports" element={<Reports />} />
             <Route path="admin" element={
               <ProtectedRoute adminOnly>
                 <Admin />

@@ -11,7 +11,8 @@ import {
   ShieldAlert, 
   Settings, 
   X,
-  Sparkles
+  Sparkles,
+  AlertOctagon
 } from 'lucide-react';
 import './Layout.css';
 
@@ -24,6 +25,7 @@ const menuItems = [
   { path: '/analytics', name: 'Analytics Hub', icon: LineChart },
   { path: '/portfolio', name: 'Portfolio Simulator', icon: PieChart },
   { path: '/predictions', name: 'Predictions & Recs', icon: Sparkles },
+  { path: '/reports', name: 'Coin Reports', icon: AlertOctagon },
   { path: '/admin', name: 'Admin Panel', icon: ShieldAlert },
   { path: '/settings', name: 'Settings', icon: Settings },
 ];
