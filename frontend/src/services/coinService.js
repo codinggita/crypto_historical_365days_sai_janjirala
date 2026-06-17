@@ -155,6 +155,16 @@ const coinService = {
     return response.data;
   },
 
+  async getTopMonthlyPerformers() {
+    const response = await api.get('/coins/performance/top-monthly');
+    return response.data;
+  },
+
+  async getTopYearlyPerformers() {
+    const response = await api.get('/coins/performance/top-yearly');
+    return response.data;
+  },
+
   async submitReport(reportData) {
     const response = await api.post('/coins/report', reportData);
     return response.data;

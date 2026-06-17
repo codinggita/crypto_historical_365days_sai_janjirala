@@ -23,6 +23,7 @@ import Admin from './pages/Admin';
 import Maintenance from './pages/Maintenance';
 import Reports from './pages/Reports';
 import Alerts from './pages/Alerts';
+import Leaderboards from './pages/Leaderboards';
 
 function PagePlaceholder({ title }) {
   return (
@@ -45,6 +46,7 @@ export default function App() {
             <Route path="compare" element={<Compare />} />
             <Route path="heatmap" element={<Heatmap />} />
             <Route path="stats" element={<Stats />} />
+            <Route path="leaderboards" element={<Leaderboards />} />
             <Route path="analytics" element={<Analytics />} />
             <Route path="portfolio" element={<Portfolio />} />
             <Route path="predictions" element={<Predictions />} />

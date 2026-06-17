@@ -13,7 +13,8 @@ import {
   X,
   Sparkles,
   AlertOctagon,
-  Bell
+  Bell,
+  Trophy
 } from 'lucide-react';
 import './Layout.css';
 
@@ -23,6 +24,7 @@ const menuItems = [
   { path: '/compare', name: 'Compare Coins', icon: ArrowLeftRight },
   { path: '/heatmap', name: 'Market Heatmap', icon: Grid },
   { path: '/stats', name: 'Global Statistics', icon: BarChart3 },
+  { path: '/leaderboards', name: 'Leaderboards', icon: Trophy },
   { path: '/analytics', name: 'Analytics Hub', icon: LineChart },
   { path: '/portfolio', name: 'Portfolio Simulator', icon: PieChart },
   { path: '/predictions', name: 'Predictions & Recs', icon: Sparkles },
