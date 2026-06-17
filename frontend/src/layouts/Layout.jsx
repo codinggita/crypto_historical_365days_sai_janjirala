@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import Navbar from './Navbar';
 import CommandMenu from '../components/CommandMenu';
@@ -9,6 +9,7 @@ import './Layout.css';
 export default function Layout() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const { user, logout } = useAuth();
+  const location = useLocation();
 
   return (
     <div className="app-layout">
@@ -46,10 +47,11 @@ export default function Layout() {
           user={user}
           onLogout={logout}
         />
-        <main className="main-viewport">
+        <main className="main-viewport page-fade-in" key={location.pathname}>
           <Outlet />
         </main>
       </div>
     </div>
   );
 }
+

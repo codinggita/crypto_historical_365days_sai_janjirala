@@ -15,14 +15,33 @@ export default function Navbar({ onMenuToggle, user, onLogout }) {
           <Menu size={22} />
         </button>
 
-        <div className="navbar-search-container">
+        <div 
+          className="navbar-search-container"
+          onClick={() => window.dispatchEvent(new CustomEvent('open-command-menu'))}
+          style={{ cursor: 'pointer', position: 'relative' }}
+        >
           <Search className="navbar-search-icon" />
           <input 
             type="text" 
-            placeholder="Search coins (e.g. BTC, ETH)..." 
+            placeholder="Search catalog..." 
             className="form-input navbar-search"
-            disabled // Enabled when search routes are integrated
+            readOnly
+            style={{ cursor: 'pointer', paddingRight: '60px' }}
           />
+          <kbd style={{
+            position: 'absolute',
+            right: '12px',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            background: 'rgba(255, 255, 255, 0.08)',
+            border: '1px solid var(--border-color)',
+            borderRadius: '4px',
+            padding: '2px 6px',
+            fontSize: '10px',
+            color: 'var(--text-muted)',
+            fontFamily: 'var(--font-sans)',
+            pointerEvents: 'none'
+          }}>Ctrl K</kbd>
         </div>
       </div>
 

@@ -105,8 +105,18 @@ export default function CommandMenu() {
         }
       }
     };
+
+    const handleOpenTrigger = () => {
+      setIsOpen(true);
+    };
+
     window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    window.addEventListener('open-command-menu', handleOpenTrigger);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('open-command-menu', handleOpenTrigger);
+    };
   }, [isOpen, totalItems, highlightedIndex, unifiedItems]);
 
   // Focus input on open & reset state
