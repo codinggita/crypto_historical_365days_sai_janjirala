@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import Navbar from './Navbar';
+import CommandMenu from '../components/CommandMenu';
 import { useAuth } from '../context/AuthContext';
 import './Layout.css';
 
@@ -11,6 +12,9 @@ export default function Layout() {
 
   return (
     <div className="app-layout">
+      {/* Global command/search overlay */}
+      <CommandMenu />
+
       {/* Background glow effects */}
       <div className="bg-glow"></div>
       <div className="bg-glow-right"></div>
