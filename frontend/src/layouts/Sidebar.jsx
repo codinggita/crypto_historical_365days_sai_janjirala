@@ -10,7 +10,8 @@ import {
   LineChart, 
   ShieldAlert, 
   Settings, 
-  X 
+  X,
+  Sparkles
 } from 'lucide-react';
 import './Layout.css';
 
@@ -22,6 +23,7 @@ const menuItems = [
   { path: '/stats', name: 'Global Statistics', icon: BarChart3 },
   { path: '/analytics', name: 'Analytics Hub', icon: LineChart },
   { path: '/portfolio', name: 'Portfolio Simulator', icon: PieChart },
+  { path: '/predictions', name: 'Predictions & Recs', icon: Sparkles },
   { path: '/admin', name: 'Admin Panel', icon: ShieldAlert },
   { path: '/settings', name: 'Settings', icon: Settings },
 ];

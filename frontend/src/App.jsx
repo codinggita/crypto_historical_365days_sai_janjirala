@@ -18,6 +18,7 @@ import Heatmap from './pages/Heatmap';
 import Stats from './pages/Stats';
 import Analytics from './pages/Analytics';
 import Portfolio from './pages/Portfolio';
+import Predictions from './pages/Predictions';
 
 function PagePlaceholder({ title }) {
   return (
@@ -42,6 +43,7 @@ export default function App() {
             <Route path="stats" element={<Stats />} />
             <Route path="analytics" element={<Analytics />} />
             <Route path="portfolio" element={<Portfolio />} />
+            <Route path="predictions" element={<Predictions />} />
             <Route path="admin" element={
               <ProtectedRoute adminOnly>
                 <PagePlaceholder title="Admin Panel" />
