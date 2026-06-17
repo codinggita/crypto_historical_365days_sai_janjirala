@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import coinService from '../services/coinService';
-import { Shield, Plus, Edit2, Trash2, Database, Upload, Download, FileJson, AlertTriangle, Loader2, CheckCircle } from 'lucide-react';
+import { Shield, Plus, Edit2, Trash2, Database, Upload, Download, FileJson, AlertTriangle, Loader2, CheckCircle, Settings } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Admin() {
   const [activeTab, setActiveTab] = useState('assets'); // 'assets' or 'bulk'
@@ -282,6 +283,28 @@ export default function Admin() {
           >
             Bulk & Export Utilities
           </button>
+          <Link
+            to="/admin/maintenance"
+            style={{
+              background: 'none',
+              border: 'none',
+              color: 'var(--text-secondary)',
+              padding: '8px 16px',
+              borderRadius: '6px',
+              cursor: 'pointer',
+              fontSize: '12px',
+              fontWeight: 600,
+              display: 'flex',
+              alignItems: 'center',
+              gap: '6px',
+              textDecoration: 'none'
+            }}
+            onMouseEnter={e => e.currentTarget.style.color = 'var(--primary-hover)'}
+            onMouseLeave={e => e.currentTarget.style.color = 'var(--text-secondary)'}
+          >
+            <Settings size={14} />
+            <span>System Health</span>
+          </Link>
         </div>
       </div>
 

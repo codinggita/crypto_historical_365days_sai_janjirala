@@ -20,6 +20,7 @@ import Analytics from './pages/Analytics';
 import Portfolio from './pages/Portfolio';
 import Predictions from './pages/Predictions';
 import Admin from './pages/Admin';
+import Maintenance from './pages/Maintenance';
 
 function PagePlaceholder({ title }) {
   return (
@@ -48,6 +49,11 @@ export default function App() {
             <Route path="admin" element={
               <ProtectedRoute adminOnly>
                 <Admin />
+              </ProtectedRoute>
+            } />
+            <Route path="admin/maintenance" element={
+              <ProtectedRoute adminOnly>
+                <Maintenance />
               </ProtectedRoute>
             } />
             <Route path="profile" element={
