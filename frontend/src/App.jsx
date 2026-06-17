@@ -17,6 +17,7 @@ import Compare from './pages/Compare';
 import Heatmap from './pages/Heatmap';
 import Stats from './pages/Stats';
 import Analytics from './pages/Analytics';
+import Portfolio from './pages/Portfolio';
 
 function PagePlaceholder({ title }) {
   return (
@@ -40,7 +41,7 @@ export default function App() {
             <Route path="heatmap" element={<Heatmap />} />
             <Route path="stats" element={<Stats />} />
             <Route path="analytics" element={<Analytics />} />
-            <Route path="portfolio" element={<PagePlaceholder title="Portfolio Simulator" />} />
+            <Route path="portfolio" element={<Portfolio />} />
             <Route path="admin" element={
               <ProtectedRoute adminOnly>
                 <PagePlaceholder title="Admin Panel" />
